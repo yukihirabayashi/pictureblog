@@ -73,5 +73,7 @@ gem 'devise-i18n-views' # 追記
 gem 'bootstrap-sass'
 gem 'omniauth'
 gem 'omniauth-twitter'
-gem 'bootstrap'
 gem 'jquery-rails'
+gem 'bootstrap', '4.0.0.alpha6'
+gem 'popper_js', '~> 1.12.3'
+gem 'rails-assets-tether', '>= 1.1.0'
