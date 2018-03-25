@@ -1,11 +1,23 @@
-<%= form_with(model: Picture.new) do |form| %>
+<%= form_with(model: @picture, local: true) do |form| %>
+  <% if @picture.errors.any? %>
+  <div id="error_explantion">
+    <h2><%= @picture.errors.count %>件のエラーがあります。</h2>
+    <ul>
+            <% @picture.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+      </ul>
+      </div>
+      <% end %>
+      
 
 <center>
   <table border="0">
+
     <tr>
       <div class="picture_title">
       <td>
-        <%= form.label :content %>
+        <%= form.label :コメント %>
       </td>  
       <td>
         <%= form.text_field :content %>
@@ -17,7 +29,7 @@
     <tr>
       <div class="picture_title">
       <td>
-        <%= form.label :image %>
+        <%= form.label :Photo %>
       </td>  
       <td>
           <%= form.file_field :image, id: :picture_image %>

@@ -7,9 +7,20 @@
   <tr>
     <td><%= picture.content %></td>
   </tr>
+
+      <%#
+      <tr>
+      <td> image_tag @pictures.image
+      <td>
+        %>
+
   <tr>
     <td><%= link_to '詳細を確認する', picture_path(picture.id) %></td>
   </tr>
+  <tr>
+    <td><%= link_to "画像とコメントを編集する", edit_picture_path(picture.id) %></td>
+    </tr>
+  
 
 <% end %>
 </table>
