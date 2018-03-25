@@ -1,0 +1,35 @@
+<%= form_with(model: Picture.new) do |form| %>
+
+<center>
+  <table border="0">
+    <tr>
+      <div class="picture_title">
+      <td>
+        <%= form.label :content %>
+      </td>  
+      <td>
+        <%= form.text_field :content %>
+      </td>
+      </div>
+    </tr>
+
+  <table border="0">
+    <tr>
+      <div class="picture_title">
+      <td>
+        <%= form.label :image %>
+      </td>  
+      <td>
+          <%= form.file_field :image, id: :picture_image %>
+          <%= form.hidden_field :image_cache %>
+      </td>
+      </div>
+    </tr>
+</table>    
+
+<p>
+  
+  <%= form.submit %>
+<% end %>
+
+<%= link_to "画像投稿一覧画面にもどる", pictures_path %>

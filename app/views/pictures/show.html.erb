@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<center>        
+  <table border="0">
+    <tr>
+      <th>コメント
+      </th>
+        <td><%= @picture.content %>
+        </td>
+    </tr>
+    <tr>
+      <th>画像
+      </th>
+        <td><%= image_tag @picture.image %>
+        </td>
+    </tr>
+    </tr>
+</table>
+</center>
+
+
+<%= link_to 'Edit', edit_picture_path(@picture) %> |
+<%= link_to 'Back', pictures_path %>
