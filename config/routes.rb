@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :pictures
-#  devise_scope :user do
-#    root to: 'devise/sessions#new'
-    root to: 'pictures#index'
-#  end
 
+  root to: 'pictures#index'
+  
+  resources :pictures do
+      collection do
+       post :confirm
+     end
+   end
+
+  devise_for :users
+
+ 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
-
+  
 end
