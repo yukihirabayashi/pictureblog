@@ -6,10 +6,8 @@
 
 
   <p>コメント:<%= @picture.content %></p>
-  <p>画像:<%= image_tag(@picture.image) %>
+  <p>画像:<%= image_tag(@picture.image) %></p>
   <%= hidden_field_tag :"cache[image]",@picture.image.cache_name %>
-  
-  </p>
 
   <%= form.submit  "登録する" %>
 <br>

@@ -1,32 +1,39 @@
 <h1>一覧画面</h1>
 
-<p><%= notice %></p>
-
-<% @pictures.each do |picture| %>
-<table border=1>
-
-  <tr>
-    <td> <%= image_tag(picture.image) %></td>
-  </tr>
-  <tr>
-    <td><%= picture.content %></td>
-  </tr>
+<div class="container">
+  
 
 
-  <tr>
-    <td><%= link_to '詳細を確認する', picture_path(picture.id) %></td>
-  </tr>
-  <tr>
-    <td><%= link_to "画像とコメントを編集する", 
+
+
+  <div class="row">
+    <% @pictures.each do |picture| %>
+      <div class="col-xs-12 col-md-6 blog-panel">
+        <table border=0>
+
+          <tr>
+            <td> <%= image_tag(picture.image) %></td>
+          </tr>
+
+          <tr>
+            <td><%= picture.content %></td>
+          </tr> 
+          <tr>
+            <td><%= link_to '詳細を確認する', picture_path(picture.id) %></td>
+          </tr>
+          <tr>
+            <td><%= link_to "画像とコメントを編集する", 
                   edit_picture_path(picture.id), 
                   data: { confirm: '本当に編集していいですか？' } %></td>
-  </tr>
-  <tr>
-    <td><%= link_to 'ブログを削除する', 
+          </tr>
+          <tr>
+            <td><%= link_to 'ブログを削除する', 
                   picture_path(picture.id), method: :delete ,
                   data: { confirm: '本当に削除していいですか？' } %></td>
-  </tr>  
+          </tr> 
+        </table>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-<% end %>
-
-</table>

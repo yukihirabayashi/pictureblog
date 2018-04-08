@@ -2,22 +2,28 @@
 
 <center>        
   <table border="0">
-    <tr>
-      <th>
-      </th>
+  <tr>
+        <td><%= image_tag @picture.image %></td>
+        </td>
+  </tr>
+  <tr>
         <td><%= @picture.content %>
-        </td>
-    </tr>
-    <tr>
-      <th>
-      </th>
-        <td><%= image_tag @picture.image %>
-        </td>
-    </tr>
-    </tr>
-</table>
-</center>
-
-
+  </tr>
+  <tr>
+        <td>
+<% unless @picture.user == current_user %>
+  <% if @favorite.present? %>
+    <%= link_to 'お気に入り解除する', favorite_path(picture_id: @picture.id), method: :delete, class: 'btn btn-danger' %>
+  <% else %>
+    <%= link_to 'お気に入りする', favorites_path(picture_id: @picture.id), method: :post, class: 'btn btn-primary' %>
+  <% end %>
+<% end %>
+<p>
+  <p>
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
 <%= link_to 'Back', pictures_path %>
+    </td>
+</tr>
+
+</center>
+  </table>

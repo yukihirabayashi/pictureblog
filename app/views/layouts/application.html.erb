@@ -25,10 +25,12 @@
         <p class="alert alert-error"><%= alert %></p>
       <% end %>
   
-  
-  
-  
+    <% if user_signed_in? %>
+    <div><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>：<%= current_user.email %></div>
+    <% end %>
+
     <%= yield %>
+
     
      
   </body>
