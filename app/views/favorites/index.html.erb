@@ -1,0 +1,33 @@
+<h1>Favorites</h1>
+
+
+<br>
+<br>
+
+<h1>    <p>
+    
+   <%#= image_tag @user.icon %> <%#= @user.name %>お気に入りブログ一覧</h1>
+
+
+
+    
+  <div class="row">
+
+    <% @favorites_pictures.each do |favorete| %>
+
+
+      <div class="col-xs-12 col-md-6 blog-panel">
+        <table border=0>
+
+          <tr>
+            <td> <%= image_tag(favorete.image) %></td>
+          </tr>
+
+          <tr>
+            <td><%= favorete.content %></td>
+          </tr> 
+
+        </table>
+      </div>
+    <% end %>
+  </div>

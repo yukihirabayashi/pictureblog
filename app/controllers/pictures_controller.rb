@@ -32,9 +32,9 @@ class PicturesController < ApplicationController
   end
   
   def show
-   # @picture = Picture.find(params[:id])
-
-    @favorite = current_user.favorites.find_by(picture_id: @picture.id)
+   @picture = Picture.find(params[:id])
+   @favorite = current_user.favorites.find_by(picture_id: @picture.id)
+  
 
   end
   
