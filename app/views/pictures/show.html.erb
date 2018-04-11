@@ -20,8 +20,15 @@
 <% end %>
 <p>
   <p>
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
-<%= link_to 'Back', pictures_path %>
+    
+    <% if @picture.user == current_user %>
+      <%= link_to 'Edit', edit_picture_path(@picture), data: { confirm: '本当に編集していいですか？' }  %> |
+      <%= link_to 'Destroy', picture_path(@picture.id), method: :delete ,data: { confirm: '本当に削除していいですか？' }  %> |
+      
+    <% end %>
+      <%= link_to 'Back', pictures_path %>
+      
+      
     </td>
 </tr>
 
