@@ -24,6 +24,7 @@ class PicturesController < ApplicationController
     @picture.save!
     
     if @picture.save
+      ContactMailer.contact_mail(@picture).deliver
       redirect_to pictures_path, notice: "画像を投稿しました！"
    #   ContactMailer.contact_mail(@picture).deliver
     else
