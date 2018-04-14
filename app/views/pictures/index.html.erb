@@ -3,18 +3,17 @@
 <div class="container">
   
 
-
-
-
   <div class="row">
     <% @pictures.each do |picture| %>
       <div class="col-xs-12 col-md-6 blog-panel">
         <table border=0>
 
           <tr>
-            <td> <%= image_tag(picture.image) %></td>
+            <td><%= image_tag(picture.image) %></td>
           </tr>
-
+          <tr>
+            <td><%= picture.user.email %></td>
+          </tr> 
           <tr>
             <td><%= picture.content %></td>
           </tr> 
@@ -27,7 +26,7 @@
           <tr>
             
         <%# current_user.id と 現在のpicture.user.id が一致しているか %>
-        <%# binding.pry %>
+
          <% if picture.user_id == current_user %>
             <td><%= link_to "画像とコメントを編集する", 
                   edit_picture_path(picture.id), 

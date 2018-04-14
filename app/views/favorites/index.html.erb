@@ -6,11 +6,9 @@
 
 <h1>    <p>
     
-   <%#= image_tag @user.icon %> <%#= @user.name %>お気に入りブログ一覧</h1>
+   <%#= image_tag current_user.icon %> <%= current_user.email %>のお気に入りブログ一覧</h1>
 
 
-
-    
   <div class="row">
 
     <% @favorites_pictures.each do |favorete| %>
