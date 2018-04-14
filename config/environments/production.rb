@@ -5,7 +5,7 @@ Rails.application.configure do
   config.cache_classes = true
   
   ### 追記 #####
-    config.action_mailer.default_url_options = { host: 'frozen-refuge-16445' }
+    config.action_mailer.default_url_options = { host: 'fathomless-reef-75713' }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings =
 {
