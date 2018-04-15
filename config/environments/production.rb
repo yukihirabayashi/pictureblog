@@ -5,7 +5,7 @@ Rails.application.configure do
   config.cache_classes = true
   
   ### 追記 #####
-    config.action_mailer.default_url_options = { host: 'young-gorge-57910' }
+    config.action_mailer.default_url_options = { host: 'https://young-gorge-57910' }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings =
 {
@@ -30,7 +30,7 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  config.conside::r_all_requests_local       = false
   config.action_controller.perform_caching = true
 
   # Attempt to read encrypted secrets from `config/secrets.yml.enc`.
