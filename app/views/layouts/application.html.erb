@@ -30,9 +30,11 @@
           <li><%= link_to "お気に入り一覧", favorites_path %></li>
           <li><%= link_to "画像投稿一覧画面", pictures_path %></li>
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to 'マイページ', edit_user_registration_path %></li>
         <% else %>
           <li><%= link_to "新規登録", new_user_registration_path %></li>
           <li><%= link_to "ログイン", new_user_session_path %></li>
+          
         <% end %>
        
 
