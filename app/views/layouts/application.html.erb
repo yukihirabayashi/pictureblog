@@ -47,6 +47,10 @@
 	</div>
 </nav>
 
+  </header>
+
+<div class = "fix-body">
+
         <% if notice %>
           <p class="alert alert-notice"><%= notice %></p>
         <% end %>
@@ -54,11 +58,6 @@
           <p class="alert alert-error"><%= alert %></p>
         <% end %>
   
-
-  </header>
-
-<div class = "fix-body">
-      
     <%= yield %>
 
 </div>  
