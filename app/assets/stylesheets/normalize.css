@@ -22,6 +22,7 @@ html {
 
 body {
   margin: 0;
+  text-align:center
 }
 
 /**
@@ -32,6 +33,7 @@ body {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+  text-align:center
 }
 
 /* Grouping content
@@ -347,7 +349,6 @@ body{
     margin: 0;         /* 余白の削除 */
     padding: 0;        /* 余白の削除 */
     height:100%;
-    margin-left: 60px;
 }
 
 /* ヘッダーの固定 */
@@ -374,7 +375,7 @@ footer
     bottom: 0px;                /* 位置(下0px) */
     left: 0px;                  /* 位置(左0px) */
     width: 100%;                /* 横幅100%　*/
-    height: 100px;              /* 縦幅140px */
+    height: 70px;              /* 縦幅140px */
   	margin: auto;              /* 中央揃え */
     padding: 20px 0 10px 0;
     color: white;

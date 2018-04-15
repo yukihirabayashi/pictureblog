@@ -4,8 +4,7 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :ユーザーネーム %><br />
-    <%= f.text_field :username, autofocus: true %>
+    <%= f.text_field :name, class: "form-control", placeholder: "名前" %>
   </div>
 <br>
   <div class="field">

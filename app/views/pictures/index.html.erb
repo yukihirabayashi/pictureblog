@@ -1,18 +1,18 @@
-<h1>一覧画面</h1>
+<h1>みんなの投稿</h1>
 
 <div class="container">
   
 
   <div class="row">
     <% @pictures.each do |picture| %>
-      <div class="col-xs-12 col-md-6 blog-panel">
+      <div class="col-xs-12 col-md-4 blog-panel">
         <table border=0>
 
           <tr>
             <td><%= image_tag(picture.image) %></td>
           </tr>
           <tr>
-            <td><%= picture.user.email %></td>
+            <td><%= picture.user.name %>さん</td>
           </tr> 
           <tr>
             <td><%= picture.content %></td>

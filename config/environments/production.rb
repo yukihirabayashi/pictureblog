@@ -5,7 +5,7 @@ Rails.application.configure do
   config.cache_classes = true
   
   ### 追記 #####
-    config.action_mailer.default_url_options = { host: 'young-gorge-57910' }
+  config.action_mailer.default_url_options = { host:'young-gorge-57910.herokuapp.com' }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings =
 {
